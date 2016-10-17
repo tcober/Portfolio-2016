@@ -7,7 +7,7 @@
 			$(".music, .code, .name").addClass("inside");
 			var title = $(this).html();
 			$(".diamond").attr("class", "diamond diamondchange");
-			var url = "http://www.thomascober.com/" + $(this).attr("data");
+			var url = window.location + $(this).attr("data");
 			$(".contentHolder").load(url, function(response, status, xhr) {
 				if ( status == "error" ) {
 					alert( "So Sorry! You can wait a sec or reload. I am working to fix this." );
