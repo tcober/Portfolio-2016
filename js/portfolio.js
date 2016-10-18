@@ -4,35 +4,48 @@
     $(".loader").on("click", function() {
         var title = $(this).html();
         var url = window.location + $(this).attr("data");
-        $(".design, .worklist").addClass("outside");
-        $(".music, .code, .name").addClass("inside");
-        $(".diamond").attr("class", "diamond diamondchange");
+        diamonds("on");
+        
         $(".contentHolder").load(url, function(response, status, xhr) {
-            if (status == "error") {
-                alert("So Sorry! You can wait a sec or reload. I am working to fix this.");
-            }
+            if (status == "error") { alert("So Sorry! You can wait a sec or reload. I am working to fix this."); }
             $(".portimages").fadeToggle(0);
             $(".description h3").append(title);
-            $(".diamond").attr("class", "diamond");
-            $(w).scroll(function(i) {
-                var scrollVar = $(w).scrollTop();
-                var scrollVarPerc = 80 + (100 - (100 - $(w).scrollTop() / 10)) + "%";
-                $('.portdescription').css({
-                    'opacity': (100 - scrollVar) / 100
-                });
-                $('.portimages').css("width", scrollVarPerc);
-            })
-            $(".design, .worklist").removeClass("outside");
-            $(".music, .code, .name").removeClass("inside");
+            scrollSize();
+            diamonds("off");
             $(".worklist, .portdescription").fadeToggle(150);
-            $(".closer").on("click", function() {
-                $(".portdescription, .portimages").remove();
-                $(".portimages, .portdescription").toggle();
-                $(".worklist").toggle();
-                $(".description h3").empty();
-            })
+            close();
         });
     })
+    
+    var close = function() {
+      $(".closer").on("click", function() {
+        $(".portdescription, .portimages").remove();
+        $(".portimages, .portdescription").toggle();
+        $(".worklist").toggle();
+        $(".description h3").empty();
+      })
+    }
+    
+    var diamonds = function(onOff) {
+      $(".design, .worklist").toggleClass("outside");
+      $(".music, .code, .name").toggleClass("inside");
+      if(onOff == "on") {
+         $(".diamond").attr("class", "diamond diamondchange");
+      } else if (onOff == "off") {
+        $(".diamond").attr("class", "diamond");
+      }
+    }
+    
+    var scrollSize = function() {
+      $(w).scroll(function(i) {
+        var scrollVar = $(w).scrollTop();
+        var scrollVarPerc = 80 + (100 - (100 - $(w).scrollTop() / 10)) + "%";
+        $('.portdescription').css({
+            'opacity': (100 - scrollVar) / 100
+        });
+        $('.portimages').css("width", scrollVarPerc);
+      });
+    }
     
     //function for closer
     $(".musicCloser").on("click", function() {
