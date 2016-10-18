@@ -60,6 +60,7 @@ table {
     fill: green; }
   100% {
     fill: purple; } }
+
 @-webkit-keyframes prism {
   0% {
     fill: red; }
@@ -75,6 +76,7 @@ table {
     fill: green; }
   100% {
     fill: purple; } }
+
 @keyframes outside {
   0% {
     border-color: red; }
@@ -90,6 +92,7 @@ table {
     border-color: green; }
   100% {
     border-color: purple; } }
+
 @-webkit-keyframes outside {
   0% {
     border-color: red; }
@@ -105,6 +108,7 @@ table {
     border-color: green; }
   100% {
     border-color: purple; } }
+
 @keyframes inside {
   0% {
     background-color: red; }
@@ -120,6 +124,7 @@ table {
     background-color: green; }
   100% {
     background-color: purple; } }
+
 @-webkit-keyframes inside {
   0% {
     background-color: red; }
@@ -135,6 +140,7 @@ table {
     background-color: green; }
   100% {
     background-color: purple; } }
+
 /* General Styles */
 a {
   text-decoration: none; }
@@ -359,5 +365,3 @@ a {
       z-index: 2; }
       .container .menu .button {
         margin-top: 30px; } }
-
-/*# sourceMappingURL=style.css.map */
