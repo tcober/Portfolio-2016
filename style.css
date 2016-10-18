@@ -161,7 +161,7 @@ a {
 .container {
   position: relative;
   margin: 0 auto;
-  margin-top: 10%;
+  margin-top: 8%;
   min-width: 800px;
   max-width: 1000px;
   width: 80%;
@@ -203,7 +203,10 @@ a {
   font-size: 15px;
   font-family: "adelle"; }
   .twitter .atf-tweet-time {
-    text-decoration: underline; }
+    text-decoration: underline;
+    float: none !important; }
+  .twitter .atf-user-card {
+    display: none !important; }
   .twitter .twittersize {
     position: relative;
     top: 50%;

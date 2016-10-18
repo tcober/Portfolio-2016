@@ -1,18 +1,5 @@
+<?php get_header(); ?>
 <?php include("svg.php"); ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
-<html>
-  
-  <head>
-    <title>Thomas Cober's Design and Web Development portfolio</title>
-    <link rel="shortcut icon" href="<?php echo get_bloginfo('template_url'); ?>/images/favicon.ico">
-    <meta name="description" content="A portfolio site for Thomas Cober of Portland Oregon. Works include front end development illustration, layout, and graphic design examples." />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="//use.typekit.net/blv1xtl.js"></script>
-    <script>try{Typekit.load();}catch(e){}</script>
-    <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-  </head>
-  
-  <body>
     <div class="backgroundContain">
       <!-- SVG CODE BELOW IS STORED IN A SEPARATE PHP FILE IN A VARIABLE! -->
       <?php echo $svgcode; ?>
@@ -35,7 +22,7 @@
         <div class="musicCloser">
           <p>X</p>
         </div>
-        <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/12351544&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+        <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/12351544&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=false"></iframe>
       </div>
       
       <div class="twitter">
@@ -82,9 +69,4 @@
       </div>
       <!-- END OF CONTAINER DIV -->
     </div>
-    
-  </body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <script src="<?php echo get_bloginfo('template_url'); ?>/js/portfolio.js"></script>
-  
-</html>
+<?php get_footer(); ?>

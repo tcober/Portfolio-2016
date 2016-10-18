@@ -115,7 +115,7 @@ a { text-decoration: none; }
 .container {
   position: relative;
   margin: 0 auto;
-  margin-top: 10%;
+  margin-top: 8%;
   min-width: 800px;
   max-width: 1000px;
   width: 80%;
@@ -165,7 +165,12 @@ a { text-decoration: none; }
   font-size: $bodyFontSize;
   font-family: $body;
 
-  .atf-tweet-time { text-decoration: underline; }
+  .atf-tweet-time { 
+    text-decoration: underline;
+    float: none !important;
+  }
+  
+  .atf-user-card { display: none !important; }
 
   .twittersize {
     position: relative;

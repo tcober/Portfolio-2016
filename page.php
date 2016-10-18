@@ -8,7 +8,6 @@ Template Name: General Page Template
 <?php 
 $images = array();
 
-
 if (get_field('image1') !== false){
 	$images[image1] = get_field('image1');
 	}
@@ -53,7 +52,5 @@ if (get_field('image4') !== false){
 				<?php } ?>
 				</div>
 			</div>
-			
-			
-				
+	
 </html>
