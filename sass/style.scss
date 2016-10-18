@@ -6,6 +6,7 @@ $header: "ff-good-headline-web-pro-con";
 $body: "adelle";
 $color1: #000;
 $color2: #fff;
+$highlight: #d92929;
 $bodyFontSize: 15px;
 
 /* Prism Animation */
@@ -279,7 +280,7 @@ a { text-decoration: none; }
 
     a {
       color: lighten($color1, 70%);
-      &:hover { color: $color1; }
+      &:hover { color: $highlight; }
     }
 
     .description {
