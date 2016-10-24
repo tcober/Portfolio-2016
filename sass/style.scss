@@ -183,6 +183,11 @@ a { text-decoration: none; }
     -ms-transform: translate(-50%,-50%);
     -webkit-transform: translate(-50%,-50%);
   }
+  
+  .preg-links {
+    color: lighten($color1, 70%);
+    &:hover { color: $highlight; }
+  }
 }
 
 /* Menu */

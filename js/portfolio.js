@@ -1,6 +1,6 @@
-/* This is all horrifying I know. Am fixing it */
+/* This is all horrifying I know. Am working on it :) */
 (function(w, d, $) {
-  //ajax load the item content
+  //Ajax load the item content
   $(".loader").on("click", function() {
     var title = $(this).html();
     var url = window.location + $(this).attr("data");
@@ -56,20 +56,21 @@
     $('.music').removeClass("selected");
   });
 
-  ///function to change buttons
+  ///Function to change buttons
   $(".button").on("click", function() {
     var buttons = $(".button");
     if (($(this).is(".music") || $(this).is(".code")) && $('.design').is(".selected")) {
-        $(".worklist, .twitter").toggle();
+      $(".worklist, .twitter").toggle();
     }
     if ($(this).hasClass('selected') == false) {
-        $(".button").removeClass("selected");
+      $(".button").removeClass("selected");
     }
     $(this).toggleClass("selected");
-  })
+  });
+  
   $('.music').on("click", function() {
     $('.player, .twitter, .menu').toggle();
-  })
+  });
 
   //function to toggle design list
   $(".design").on("click", function() {
